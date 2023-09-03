@@ -100,12 +100,12 @@ h1 {
 
     }
     .works img{
-        max-width:100% !important;
+        max-width:98% !important;
 
     }
 }
 
-@media screen and (min-width:41rem){
+@media screen and (min-width:40rem){
     
     body{
         display: grid;
@@ -128,7 +128,7 @@ h1 {
     }
 
     .works img{
-        max-width: 120%;
+        max-width: 350px;
 
     }
     
@@ -181,12 +181,10 @@ h1.hello img{
    
 }
 
-.works img{
+/* .works img{
     object-fit: contain;
     width:350px;
-    /* border: 1px solid red; */
-    max-height: 250px;
-    
-}
+    border: 1px solid red;
+    max-height: 250px;*/
 
 
