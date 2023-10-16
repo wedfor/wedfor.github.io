@@ -25,13 +25,23 @@
 
 
 
+const desc = {
+    '1':'31.10.2022',
+    '2':'9.2023 Ветерок',
+    '3':'Губы',
+    '4':'Ветерок',
+    '5':'На пляже',
+    '6':'Тыквы',
+    '7':'',
+    '8':'Подсолнух'};
 
 
-
-function viewPhoto(img){
+function viewPhoto(img, index){
     img = img.cloneNode()
     modal.style.display = "flex";
     modal.appendChild(img);
+    description.textContent = desc[index-1]
+
     
     function closePhoto(img){
         modal.removeChild(img);
@@ -50,10 +60,10 @@ function viewPhoto(img){
 
 const modal = document.querySelector('.modal');
 const img = document.querySelectorAll('img');
+const description = document.querySelector('.description');
 
-
-img.forEach(function(currentValue){
-    currentValue.addEventListener('click', () => viewPhoto(currentValue))
+img.forEach(function(currentValue, index){
+    currentValue.addEventListener('click', () => viewPhoto(currentValue,index))
 })
 
 
